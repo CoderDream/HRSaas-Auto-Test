@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.company.listenner.TestFailListener" />
+    </listeners>
+    <test verbose="2" preserve-order="true" name="D:/Projects/AutoTest/src/main/java/com/company/cases">
+        <classes>
+            <class name="com.company.cases.MainPageCase">
+                <methods>
+                    <include name="testMainPage"/>
+                </methods>
+            </class>
+            <class name="com.company.cases.personnelmatters.PersonnelMattersAddPageCase">
+                <methods>
+                    <include name="testEntryNewEmployees"/>
+                </methods>
+            </class>
+            <class name="com.company.cases.personnelmatters.BecomeNormalManagementPageCase">
+                <methods>
+                    <include name="testBecomeNormalEmployee"/>
+                    <include name="testCheckBecomeNormalEmployee"/>
+                </methods>
+            </class>
+            <class name="com.company.cases.personnelmatters.LeaveJobManagementPageCase">
+                <methods>
+                    <include name="testLeaveJobProcess"/>
+                    <include name="testCheckLeaveEmployee"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
